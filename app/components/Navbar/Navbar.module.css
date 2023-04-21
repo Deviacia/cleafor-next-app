@@ -1,0 +1,24 @@
+.nav {
+    border-bottom: solid 1px var(--color-outline);
+}
+
+.list {
+    display: inline-flex;
+}
+
+.item {
+    list-style: none;
+    display: block;
+}
+
+.link {
+    text-decoration: none;
+    display: block;
+    padding: 1.6rem;
+
+    transition: color .195s linear;
+}
+
+.link:hover {
+    color: var(--color-text_accent);
+}
