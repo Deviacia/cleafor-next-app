@@ -1,5 +1,4 @@
 import { useTranslation } from '../../i18n'
-import PageLayout from '../../layouts/PageLayout/PageLayout'
 import Container from '../../components/Container/Container'
 
 export async function generateMetadata({ params: { lng } }) {
@@ -7,12 +6,10 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t('title') }
 }
 
-export default async function Page({ params: { lng } }) {
+export default async function Employer({ params: { lng } }) {
   return (
-    <PageLayout lng={lng} path={'/employer'}>
       <main>
         <Container></Container>
       </main>
-    </PageLayout>
   )
 }

@@ -1,19 +1,13 @@
 import React from "react";
+import VacancyItem from "../../components/Vacancies/VacancyItem";
 
 const VacanciesList = ({ vacancies }) => {
   const data = vacancies?.data;
-  const meta = vacancies?.meta;
 
   return (
-    <>
-      <ul>
-        {data.map((vacancy) => (
-          <li key={vacancy.id}>
-            <a href={`vacancies/${vacancy.id}`}>{vacancy.id}</a>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {data ? data.map((vacancy) => <VacancyItem key={vacancy.id} vacancy={vacancy} />) : null}
+    </ul>
   );
 };
 

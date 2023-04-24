@@ -1,0 +1,5 @@
+.item {
+    padding: 1.6rem;
+    border: solid 1px var(--color-outline);
+    border-radius: .8rem;
+}
