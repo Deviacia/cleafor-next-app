@@ -1,4 +1,4 @@
-import { useTranslation } from '../../../i18n'
+import { useTranslation } from '@/i18n'
 
 export default async function VacancyHead({ params: { lng } }) {
   const { t } = await useTranslation(lng, 'vacancies')

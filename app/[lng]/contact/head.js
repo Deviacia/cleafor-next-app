@@ -1,4 +1,4 @@
-import { useTranslation } from '../../i18n'
+import { useTranslation } from '@/i18n'
 
 export default async function ContactHead({ params: { lng } }) {
   const { t } = await useTranslation(lng, 'contact')

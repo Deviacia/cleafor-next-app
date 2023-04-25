@@ -1,5 +1,5 @@
-import Container from '../../components/Container/Container'
-import { useTranslation } from '../../i18n'
+import Container from '@/components/Container/Container'
+import { useTranslation } from '@/i18n'
 
 export async function generateMetadata({ params: { lng } }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks

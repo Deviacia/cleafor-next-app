@@ -1,7 +1,7 @@
 import { dir } from "i18next";
-import { languages } from "../i18n/settings";
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/Navbar";
+import { languages } from "@/i18n/settings";
+import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 import "./global.css";
 
 export async function generateStaticParams() {

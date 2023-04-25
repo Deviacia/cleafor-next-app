@@ -1,8 +1,8 @@
 import { use } from "react";
-import { getVacancy } from '../../../api/vacancies'
-import { useTranslation } from '../../../i18n'
-import Container from "../../../components/Container/Container";
-import ErrorBoundary from "@/app/components/ErrorBoundary";
+import { getVacancy } from '@/api/vacancies'
+import { useTranslation } from '@/i18n'
+import Container from "@/components/Container/Container";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export async function generateMetadata({ params: { lng } }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
