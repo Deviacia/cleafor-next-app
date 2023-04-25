@@ -1,8 +1,8 @@
-import { apiHost } from "../utils/constants";
+import { API_HOST } from "@/utils/constants";
 
 export async function getVacancies() {
   try {
-    const res = await fetch(`${apiHost}/vacancies`, {
+    const res = await fetch(`${API_HOST}/vacancies`, {
       cache: "force-cache",
     });
 
@@ -16,7 +16,7 @@ export async function getVacancies() {
 
 export async function getVacancy(id) {
   try {
-    const res = await fetch(`${apiHost}/vacancies/${id}`);
+    const res = await fetch(`${API_HOST}/vacancies/${id}`);
 
     return res.json();
   } catch (error) {
