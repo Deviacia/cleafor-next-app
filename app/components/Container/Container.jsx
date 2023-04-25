@@ -1,11 +1,17 @@
-import styles from './Container.module.css'
+import styles from "./Container.module.css";
 
-const Container = ({children}) => {
+const Container = ({ children, isNarrow }) => {
   return (
-    <div className={styles.container}>
-        {children}
+    <div
+      className={
+        isNarrow
+          ? [styles.container, styles.container_narrow].join(" ")
+          : styles.container
+      }
+    >
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;

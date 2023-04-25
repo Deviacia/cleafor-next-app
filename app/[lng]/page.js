@@ -1,10 +1,12 @@
-import HomeHero from "../modules/HomePage/HomeHero";
-import HomeExperiences from "../modules/HomePage/HomeExperiences";
-import HomeServices from "../modules/HomePage/HomeServices";
-import HomeAbout from "../modules/HomePage/HomeAbout";
-import HomeContact from "../modules/HomePage/HomeContact";
-import Container from "../components/Container/Container";
-import { useTranslation } from '../i18n'
+import { useTranslation } from '@/i18n'
+import Container from "@/components/Container/Container";
+import {
+  HomeHero,
+  HomeExperiences,
+  HomeServices,
+  HomeAbout,
+  HomeContact
+} from "@/modules/HomePage";
 
 export async function generateMetadata({ params: { lng } }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -16,7 +18,7 @@ export default async function Home({ params: { lng } }) {
   return (
     <main>
       <HomeHero />
-      <Container>
+      <Container isNarrow={true}>
         <HomeExperiences />
         <HomeServices />
         <HomeAbout />

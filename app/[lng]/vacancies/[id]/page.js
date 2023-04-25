@@ -16,14 +16,12 @@ export default function VacancyPage({ params: { lng, id } }) {
 
   return (
     <main>
-      <Container>
+      <Container isNarrow={true}>
         <ErrorBoundary>
           <div>
-            <div>
-              <p>Vacancy ID: {data?.id}</p>
-              <h1>{data?.attributes.name}</h1>
-              <p>{data?.attributes.description}</p>
-            </div>
+            <p>Vacancy ID: {data?.id}</p>
+            <h1>{data?.attributes.name}</h1>
+            <p>{data?.attributes.description}</p>
           </div>
         </ErrorBoundary>
       </Container>

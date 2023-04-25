@@ -1,5 +1,3 @@
-import React from 'react'
-
 const HomeContact = () => {
   return (
     <div>HomeContact</div>

@@ -1,6 +1,14 @@
-.container {
+.container,
+.container_narrow {
     width: 100%;
-    max-width: 1200px;
     padding: 0 1.6rem;
     margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.container_narrow {
+    max-width: 965px;
 }

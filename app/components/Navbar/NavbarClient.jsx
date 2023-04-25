@@ -7,7 +7,7 @@ import Container from "../Container/Container";
 import styles from "./Navbar.module.css";
 
 const NavbarClient = ({ routes, lng, path }) => {
-  // const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <nav className={styles.nav}>

@@ -16,7 +16,7 @@ export default function Vacancies({ params: { lng } }) {
 
   return (
     <main>
-      <Container>
+      <Container isNarrow={true}>
         <ErrorBoundary>
           <VacanciesList vacancies={vacancies} />
         </ErrorBoundary>

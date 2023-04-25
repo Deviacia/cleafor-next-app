@@ -1,5 +1,4 @@
-import React from "react";
-import VacancyItem from "../../components/Vacancies/VacancyItem";
+import VacancyItem from "@/components/Vacancies/VacancyItem";
 
 const VacanciesList = ({ vacancies }) => {
   return (
