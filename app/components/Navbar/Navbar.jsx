@@ -1,5 +1,5 @@
-import { useTranslation } from "../../i18n";
-import NavbarClient from './NavbarClient'
+import { useTranslation } from "@/i18n";
+import NavbarClient from "./NavbarClient";
 
 const Navbar = async ({ lng, path }) => {
   const { t } = await useTranslation(lng, "navbar");
@@ -11,7 +11,7 @@ const Navbar = async ({ lng, path }) => {
     { path: `/${lng}/contact`, name: t("contact") },
   ];
 
-  return <NavbarClient routes={routes} lng={lng} path={path} />
+  return <NavbarClient routes={routes} lng={lng} path={path} />;
 };
 
 export default Navbar;

@@ -1,7 +1,13 @@
-const HomeAbout = () => {
-  return (
-    <div>HomeAbout</div>
-  )
-}
+import { useTranslation } from "@/i18n";
 
-export default HomeAbout
+const HomeAbout = async ({ lng }) => {
+  const { t } = await useTranslation(lng, "home");
+
+  return (
+    <>
+      <div>HomeAbout</div>
+    </>
+  );
+};
+
+export default HomeAbout;

@@ -14,15 +14,15 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t("title") };
 }
 
-export default async function Home() {
+export default async function Home({ params: { lng } }) {
   return (
     <main>
-      <HomeHero />
+      <HomeHero lng={lng} />
       <Container isNarrow={true}>
-        <HomeExperiences />
-        <HomeServices />
-        <HomeAbout />
-        <HomeContact />
+        <HomeExperiences lng={lng} />
+        <HomeServices lng={lng} />
+        <HomeAbout lng={lng} />
+        <HomeContact lng={lng} />
       </Container>
     </main>
   );

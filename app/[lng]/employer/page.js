@@ -7,10 +7,12 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t("title") };
 }
 
-export default async function Employer() {
+export default async function Employer({ params: { lng } }) {
   return (
     <main>
-      <Container></Container>
+      <Container>
+        Information for employer will be here
+      </Container>
     </main>
   )
 }

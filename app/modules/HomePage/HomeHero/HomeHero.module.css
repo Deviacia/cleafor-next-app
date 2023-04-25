@@ -1,0 +1,10 @@
+.hero {
+    height: 60rem;
+    border-bottom: solid 1px var(--color-outline);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

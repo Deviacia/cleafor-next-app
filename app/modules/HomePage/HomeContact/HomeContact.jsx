@@ -1,7 +1,13 @@
-const HomeContact = () => {
-  return (
-    <div>HomeContact</div>
-  )
-}
+import { useTranslation } from "@/i18n";
 
-export default HomeContact
+const HomeContact = async ({ lng }) => {
+  const { t } = await useTranslation(lng, "home");
+
+  return (
+    <>
+      <div>HomeContact</div>
+    </>
+  );
+};
+
+export default HomeContact;

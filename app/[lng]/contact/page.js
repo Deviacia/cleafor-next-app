@@ -7,10 +7,12 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t("title") };
 }
 
-export default async function Contact() {
+export default async function Contact({ params: { lng } }) {
   return (
       <main>
-        <Container></Container>
+        <Container>
+          Contact form will be here
+        </Container>
       </main>
   );
 }

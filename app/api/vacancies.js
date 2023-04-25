@@ -1,16 +1,12 @@
 import { API_HOST } from "@/utils/constants";
 
-export async function getVacancies() {
+export async function getVacancies(count) {
   try {
-    const res = await fetch(`${API_HOST}/vacancies`, {
-      cache: "force-cache",
-    });
+    const res = await fetch(`${API_HOST}/vacancies`);
 
     return res.json();
   } catch (error) {
-    return {
-      error,
-    };
+    return error;
   }
 }
 
@@ -20,10 +16,6 @@ export async function getVacancy(id) {
 
     return res.json();
   } catch (error) {
-    return {
-      data: {
-        error: error.message,
-      },
-    };
+    return error;
   }
 }

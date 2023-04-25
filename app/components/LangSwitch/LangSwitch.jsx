@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { languages } from "@/i18n/settings";
-import styles from './LangSwitch.module.css';
+import styles from "./LangSwitch.module.css";
 
 const LangSwitch = ({ lng, path = "" }) => {
   return (
@@ -11,7 +11,9 @@ const LangSwitch = ({ lng, path = "" }) => {
           return (
             <span key={l} className={styles.item}>
               {index > 0 && " or "}
-              <Link href={`/${l}${path}`} className={styles.link}>{l}</Link>
+              <Link href={`/${l}${path}`} className={styles.link}>
+                {`${l[0].toUpperCase()}${l[1]}`}
+              </Link>
             </span>
           );
         })}
