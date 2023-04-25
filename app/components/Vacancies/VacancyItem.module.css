@@ -1,19 +1,19 @@
 .item {
     border-radius: .8rem;
     border: solid 1px var(--color-outline);
+    transition: border .195s linear;
+}
+
+.item:hover {
+    border: solid 1px var(--color-text_accent);
 }
 
 .link {
     display: block;
     padding: 1.6rem;
-    transition: background-color .195s linear;
 }
 
-.link:hover {
-    background-color: var(--color-outline);
-}
-
-.title{
+.title {
     font-size: 1.9rem;
     font-weight: 400;
 }

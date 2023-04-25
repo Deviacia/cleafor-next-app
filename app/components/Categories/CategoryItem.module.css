@@ -1,0 +1,9 @@
+.item {
+    color: var(--color-text);
+    font-size: 1.6rem;
+    background-color: transparent;
+
+    padding: 1.1rem 1.6rem;
+    border: solid 1px var(--color-outline);
+    border-radius: .8rem;
+}

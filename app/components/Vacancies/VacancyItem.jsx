@@ -3,7 +3,7 @@ import styles from "./VacancyItem.module.css";
 const VacancyItem = ({ vacancy }) => {
   return (
     <li key={vacancy.id} className={styles.item}>
-      <a href={`vacancies/${vacancy.id}`} className={styles.link}>
+      <a href={`vacancies/${vacancy.id}`} className={styles.link} target="blank">
         <div>
           <div>
             <h1 className={styles.title}>{vacancy.attributes.name}</h1>

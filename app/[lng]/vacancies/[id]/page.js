@@ -1,9 +1,9 @@
 import { use } from "react";
-import { getVacancy } from '@/api/vacancies'
-import { useTranslation } from '@/i18n'
+import { getVacancy } from "@/api/vacancies";
+import { useTranslation } from "@/i18n";
 import Container from "@/components/Container/Container";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import PreviousButton from "@/components/PreviousButton/PreviousButton";
+import VacancyProfile from "@/components/Vacancies/VacancyProfile";
 
 export async function generateMetadata({ params: { lng } }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -11,20 +11,14 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t("title") };
 }
 
-export default function VacancyPage({ params: { lng, id } }) {
-  const vacancy = use(getVacancy(id));
-  const data = vacancy?.data;
+export default function Vacancy({ params: { lng, id } }) {
+  const vacancy = use(getVacancy(id, lng));
 
   return (
-    <main className='main'>
+    <main className="main">
       <Container isNarrow={true}>
-        <PreviousButton />
         <ErrorBoundary>
-          <div>
-            <p>Vacancy ID: {data?.id}</p>
-            <h1>{data?.attributes.name}</h1>
-            <p>{data?.attributes.description}</p>
-          </div>
+          <VacancyProfile data={vacancy.data} />
         </ErrorBoundary>
       </Container>
     </main>
