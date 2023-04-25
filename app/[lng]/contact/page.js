@@ -7,7 +7,7 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t("title") };
 }
 
-export default async function Contact({ params: { lng } }) {
+export default async function Contact() {
   return (
       <main>
         <Container></Container>

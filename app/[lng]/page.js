@@ -14,7 +14,7 @@ export async function generateMetadata({ params: { lng } }) {
   return { title: t("title") };
 }
 
-export default async function Home({ params: { lng } }) {
+export default async function Home() {
   return (
     <main>
       <HomeHero />

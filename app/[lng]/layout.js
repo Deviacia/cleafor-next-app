@@ -2,9 +2,9 @@
 
 import { dir } from "i18next";
 import { languages } from "@/i18n/settings";
+import { usePathname } from 'next/navigation';
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
-import { usePathname } from 'next/navigation';
 import "./global.css";
 
 export async function generateStaticParams() {

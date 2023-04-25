@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -11,17 +11,21 @@ const NavbarClient = ({ routes, lng, path }) => {
 
   return (
     <nav className={styles.nav}>
-      <Container>
-        <ul className={styles.list}>
-          {routes?.map((route, index) => (
-            <li key={index} className={styles.item}>
-              <Link href={route.path} className={styles.link}>
-                {route.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <LangSwitch lng={lng} path={path} />
+      <Container className={styles.container}>
+        <Link href={`/${lng}`}>LOGO</Link>
+
+        <div className={styles.column}>
+          <ul className={styles.list}>
+            {routes?.map((route, index) => (
+              <li key={index} className={styles.item}>
+                <Link href={route.path} className={styles.link}>
+                  {route.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <LangSwitch lng={lng} path={path} />
+        </div>
       </Container>
     </nav>
   );
