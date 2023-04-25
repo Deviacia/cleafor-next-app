@@ -1,5 +1,19 @@
 .item {
-    padding: 1.6rem;
-    border: solid 1px var(--color-outline);
     border-radius: .8rem;
+    border: solid 1px var(--color-outline);
+}
+
+.link {
+    display: block;
+    padding: 1.6rem;
+    transition: background-color .195s linear;
+}
+
+.link:hover {
+    background-color: var(--color-outline);
+}
+
+.title{
+    font-size: 1.9rem;
+    font-weight: 400;
 }

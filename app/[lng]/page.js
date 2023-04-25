@@ -16,7 +16,7 @@ export async function generateMetadata({ params: { lng } }) {
 
 export default async function Home({ params: { lng } }) {
   return (
-    <main>
+    <main className='main'>
       <HomeHero lng={lng} />
       <Container isNarrow={true}>
         <HomeExperiences lng={lng} />

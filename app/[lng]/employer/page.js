@@ -9,7 +9,7 @@ export async function generateMetadata({ params: { lng } }) {
 
 export default async function Employer({ params: { lng } }) {
   return (
-    <main>
+    <main className='main'>
       <Container>
         Information for employer will be here
       </Container>

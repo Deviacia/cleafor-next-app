@@ -1,8 +1,9 @@
 import VacancyItem from "@/components/Vacancies/VacancyItem";
+import styles from './VacanciesList.module.css'
 
 const VacanciesList = ({ vacancies }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       {vacancies.data
         ? vacancies.data.map((vacancy) => (
             <VacancyItem key={vacancy.id} vacancy={vacancy} />

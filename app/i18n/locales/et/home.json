@@ -2,5 +2,21 @@
     "hero": {
         "heading": "Otsige kiiresti töötajaid mis tahes ülesande jaoks",
         "button": "Palga töötajaid"
+    },
+    "about": {
+        "preheading": "",
+        "heading": ""
+    },
+    "experiences": {
+        "preheading": "",
+        "heading": ""
+    },
+    "services": {
+        "preheading": "",
+        "heading": ""
+    },
+    "contact": {
+        "preheading": "",
+        "heading": ""
     }
 }

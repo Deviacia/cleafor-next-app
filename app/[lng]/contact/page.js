@@ -9,7 +9,7 @@ export async function generateMetadata({ params: { lng } }) {
 
 export default async function Contact({ params: { lng } }) {
   return (
-      <main>
+      <main className='main'>
         <Container>
           Contact form will be here
         </Container>

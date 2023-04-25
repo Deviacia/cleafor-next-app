@@ -2,5 +2,21 @@
     "hero": {
         "heading": "Быстро найдем работников для любой задачи",
         "button": "Нанять сотрудников"
+    },
+    "about": {
+        "preheading": "",
+        "heading": ""
+    },
+    "experiences": {
+        "preheading": "",
+        "heading": ""
+    },
+    "services": {
+        "preheading": "",
+        "heading": ""
+    },
+    "contact": {
+        "preheading": "",
+        "heading": ""
     }
 }

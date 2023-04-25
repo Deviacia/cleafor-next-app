@@ -1,9 +1,9 @@
 import { use } from "react";
 import Container from "@/components/Container/Container";
-import VacanciesList from "@/modules/VacanciesPage/VacanciesList";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import { VacanciesList } from "@/modules/VacanciesPage";
 import { getVacancies } from '@/api/vacancies'
 import { useTranslation } from '@/i18n'
-import ErrorBoundary from "@/components/ErrorBoundary";
 
 export async function generateMetadata({ params: { lng } }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -15,7 +15,7 @@ export default function Vacancies({ params: { lng } }) {
   const vacancies = use(getVacancies());
 
   return (
-    <main>
+    <main className='main'>
       <Container isNarrow={true}>
         <ErrorBoundary>
           <VacanciesList vacancies={vacancies} />

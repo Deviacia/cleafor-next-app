@@ -49,6 +49,11 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   letter-spacing: 0.05em;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
 }
 
 h1,
@@ -75,6 +80,10 @@ img {
   width: 100%;
   height: auto;
   aspect-ratio: attr(width) / attr(height);
+}
+
+.main {
+  height: 100%;
 }
 
 .grid {
