@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { languages } from "../../i18n/settings";
 import styles from './LangSwitch.module.css';

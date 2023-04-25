@@ -1,47 +1,31 @@
 import { use } from "react";
-// import { useRouter } from "next/navigation";
-import { useTranslation } from "../../../i18n";
+import { getVacancy } from '../../../api/vacancies'
+import { useTranslation } from '../../../i18n'
 import Container from "../../../components/Container/Container";
+import ErrorBoundary from "@/app/components/ErrorBoundary";
 
 export async function generateMetadata({ params: { lng } }) {
-  const { t } = await useTranslation(lng, "vacancy");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng, "vacancies");
   return { title: t("title") };
 }
 
-async function getVacancy(id) {
-  try {
-    const res = await fetch(`http://127.0.0.1:8080/api/vacancies/${id}`);
-
-    return res.json();
-  } catch (error) {
-    return {
-      data: {
-        error: error.message,
-      },
-    };
-  }
-}
-
-export default function Page({ params: { lng, id } }) {
+export default function VacancyPage({ params: { lng, id } }) {
   const vacancy = use(getVacancy(id));
-  // const router = useRouter();
   const data = vacancy?.data;
 
   return (
     <main>
       <Container>
-        {vacancy.error ? (
-          <div>{vacancy.error.message}</div>
-        ) : (
+        <ErrorBoundary>
           <div>
-            {/* <button onClick={() => router.back()}>Back</button> */}
             <div>
               <p>Vacancy ID: {data?.id}</p>
               <h1>{data?.attributes.name}</h1>
               <p>{data?.attributes.description}</p>
             </div>
           </div>
-        )}
+        </ErrorBoundary>
       </Container>
     </main>
   );

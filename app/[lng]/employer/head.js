@@ -1,6 +1,6 @@
 import { useTranslation } from '../../i18n'
 
-export default async function Head({ params: { lng } }) {
+export default async function EmployerHead({ params: { lng } }) {
   const { t } = await useTranslation(lng, 'employer')
 
   return (

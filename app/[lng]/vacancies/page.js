@@ -1,39 +1,26 @@
-import { useTranslation } from "../../i18n";
 import { use } from "react";
 import Container from "../../components/Container/Container";
 import VacanciesList from "../../modules/VacanciesPage/VacanciesList";
+import { getVacancies } from '../../api/vacancies'
+import { useTranslation } from '../../i18n'
+import ErrorBoundary from "@/app/components/ErrorBoundary";
 
 export async function generateMetadata({ params: { lng } }) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng, "vacancies");
   return { title: t("title") };
-}
-
-async function getVacancies() {
-  try {
-    const res = await fetch("http://127.0.0.1:8080/api/vacancies", {
-      cache: "force-cache",
-    });
-
-    return res.json();
-  } catch (error) {
-    return {
-      error,
-    };
-  }
 }
 
 export default function Vacancies({ params: { lng } }) {
   const vacancies = use(getVacancies());
 
   return (
-      <main>
-        <Container>
-          {vacancies.error ? (
-            <div>{vacancies.error.message}</div>
-          ) : (
-            <VacanciesList vacancies={vacancies} />
-          )}
-        </Container>
-      </main>
+    <main>
+      <Container>
+        <ErrorBoundary>
+          <VacanciesList vacancies={vacancies} />
+        </ErrorBoundary>
+      </Container>
+    </main>
   );
 }
